@@ -1,0 +1,17 @@
+type Query{
+    findAllTaskByUser(id: ID):[TaskFoo]
+    findUser(id: ID): UserFoo
+    findByTask(id: ID) : TaskFoo
+}
+
+type UserFoo{
+    id: ID
+    username: String
+    email: String
+    tasks: [TaskFoo]
+}
+
+type TaskFoo{
+    id: ID
+    description: String
+}
